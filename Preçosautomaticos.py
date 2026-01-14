@@ -3,22 +3,7 @@ import pyautogui
 
 # Pegando a data da etiqueta
 
-import PySimpleGUI as sg
-
-
-
-layout = [
-[sg.Text('Digite a validade: ')],
-[sg.InputText()],
-[sg.Submit()]
-]
-
-window = sg.Window('Preços Automáticos', layout)
-
-event, values = window.read()
-window.close()
-
-text_input = values[0]
+data = input("Digite a data de validade): ")
 # validade = input("Digite a data de validade: ")
 
 visual = 151, 37
@@ -47,7 +32,7 @@ time.sleep(1)
 
 #primeira etiqueta (alimentando a data)
 pyautogui.write(primcod), pyautogui.press("tab"), pyautogui.press("tab"), pyautogui.press("tab"),
-pyautogui.write(text_input), pyautogui.press("tab"), pyautogui.press("tab"), pyautogui.press("enter"),
+pyautogui.write(data), pyautogui.press("tab"), pyautogui.press("tab"), pyautogui.press("enter"),
 time.sleep(3.2),pyautogui.press("tab"),pyautogui.press("tab"),pyautogui.press("enter"), time.sleep(4), pyautogui.hotkey("alt", "f4"),
 pyautogui.press("tab"), pyautogui.press("tab"), pyautogui.press("tab")
 
